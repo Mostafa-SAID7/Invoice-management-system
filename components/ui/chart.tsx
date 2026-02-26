@@ -1,5 +1,6 @@
 "use client"
 
+// Chart component for data visualization
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 
