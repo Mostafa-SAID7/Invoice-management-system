@@ -15,6 +15,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -53,13 +54,24 @@ const menuItems = [
 
 export function AppSidebar() {
   const pathname = usePathname()
+  const { setOpenMobile, isMobile } = useSidebar()
+
+  const handleLinkClick = () => {
+    if (isMobile) {
+      setOpenMobile(false)
+    }
+  }
 
   return (
-    <Sidebar>
+    <Sidebar className="slide-in">
       <SidebarHeader className="border-b">
         <div className="flex items-center gap-2 px-2 py-2">
-          <Receipt className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">InvoiceMe</span>
+          <div className="p-1.5 rounded-lg bg-primary/10">
+            <Receipt className="h-6 w-6 text-primary" />
+          </div>
+          <span className="font-bold text-lg bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            InvoiceMe
+          </span>
         </div>
       </SidebarHeader>
 
@@ -71,7 +83,7 @@ export function AppSidebar() {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild isActive={pathname === item.url}>
-                    <Link href={item.url}>
+                    <Link href={item.url} onClick={handleLinkClick}>
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
                     </Link>
@@ -85,10 +97,14 @@ export function AppSidebar() {
 
       <SidebarFooter className="border-t p-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <Link 
+            href="/settings" 
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+            onClick={handleLinkClick}
+          >
             <Settings className="h-4 w-4" />
             <span className="text-sm">Settings</span>
-          </div>
+          </Link>
           <ThemeToggle />
         </div>
       </SidebarFooter>
