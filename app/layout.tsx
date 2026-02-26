@@ -9,8 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "InvoiceMe - Modern Invoice Management",
-  description: "Simple yet powerful invoicing platform for freelancers and small businesses",
-    generator: 'v0.dev'
+  description: "Simple yet powerful invoicing platform for freelancers and small businesses"
 }
 
 export default function RootLayout({

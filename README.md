@@ -1,30 +1,41 @@
-# Invoice management system
+# Invoice Management System
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/mostafa-said7s-projects/v0-invoice-management-system)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/tySAiQaJb68)
+A modern invoice management application built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+Simple yet powerful invoicing platform for freelancers and small businesses to manage clients, create invoices, and track payments.
 
-## Deployment
+## Features
 
-Your project is live at:
+- Client management
+- Invoice creation and tracking
+- Dashboard with analytics
+- Dark/Light theme support
+- Responsive design
 
-**[https://vercel.com/mostafa-said7s-projects/v0-invoice-management-system](https://vercel.com/mostafa-said7s-projects/v0-invoice-management-system)**
+## Getting Started
 
-## Build your app
+Install dependencies:
 
-Continue building your app on:
+```bash
+pnpm install
+```
 
-**[https://v0.dev/chat/projects/tySAiQaJb68](https://v0.dev/chat/projects/tySAiQaJb68)**
+Run the development server:
 
-## How It Works
+```bash
+pnpm dev
+```
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Radix UI Components
+- React Hook Form
+- Zod validation
